@@ -1,0 +1,142 @@
+/* Typography */
+/* Colors */
+body {
+  background-color: #dde3e7;
+  /* Type Concerns */
+  font-family: "Open Sans", "Abril Fatface", "Arial";
+  font-weight: 300;
+  /* h1-h5 */ }
+  body ::selection {
+    background: rgba(30, 80, 120, 0.8);
+    color: white; }
+  body h1,
+  body h2,
+  body h3,
+  body h4,
+  body h5 {
+    font-weight: 600; }
+
+.header-desc h1 {
+  color: #161b23;
+  font: 400 4.5em/0.85em "Abril Fatface"; }
+.header-desc h2 {
+  color: #8597b3;
+  font: 300 1.25em/1.75em "Open Sans";
+  margin: 0px 0px 10px 5px; }
+
+.machine {
+  margin-top: 5em; }
+
+/* Slot Styles */
+.slot-container .slot-reel {
+  text-align: center;
+  border: 5px solid #e5bd17;
+  height: 250px;
+  width: auto;
+  overflow: hidden; }
+  @media (max-width: 990px) {
+    .slot-container .slot-reel {
+      margin-top: 2em;
+      height: 235px; } }
+.slot-container .slot {
+  background-size: cover;
+  background-repeat: repeat-y;
+  height: 250px;
+  -webkit-transition: background-position 175ms ease;
+  transition: background-position 175ms ease; }
+.slot-container .slot-one {
+  background-image: url("../images/slot1.png"); }
+.slot-container .slot-two {
+  background-image: url("../images/slot2.png"); }
+.slot-container .slot-three {
+  background-image: url("../images/slot3.png"); }
+
+/* Slide Positions - Media Queries to give slight responsive fix */
+.position-0 {
+  background-position: 0% 0%; }
+
+.position-1 {
+  background-position: 0% 50%; }
+  @media (max-width: 990px) {
+    .position-1 {
+      background-position: 0% 52%; } }
+
+.position-2 {
+  background-position: 0% 100%; }
+  @media (max-width: 990px) {
+    .position-2 {
+      background-position: 0% 103%; } }
+
+/* Spin Button */
+.spin {
+  margin-top: 2em; }
+  .spin .spin-button {
+    /* Color & Padding for Spin Button */
+    padding: .5em;
+    width: 100%;
+    background-color: rgba(230, 70, 20, 0.85);
+    border: 2px solid rgba(230, 70, 20, 0.95);
+    color: rgba(255, 255, 255, 0.75);
+    /* Typography Concerns for Spin Button */
+    font: 600 2.75em Open Sans;
+    text-align: center;
+    text-transform: uppercase;
+    -webkit-transition: background-color 250ms ease-in-out;
+    transition: background-color 250ms ease-in-out; }
+    .spin .spin-button:hover {
+      cursor: pointer;
+      background-color: rgba(230, 70, 20, 0.75); }
+    .spin .spin-button:active {
+      background-color: #e64614; }
+  .spin .spinning {
+    color: #FFFFFF;
+    background-color: #e64614; }
+
+/* Win Status */
+.win {
+  margin-top: 2em;
+  text-align: center; }
+  .win h2 {
+    font: 400 3.5em/0.85em Abril Fatface; }
+  .win .tossing {
+    width: 200px;
+    height: 200px;
+    margin: 0 auto; }
+  .win #coffee-img {
+    background: url("../images/coffee.png") no-repeat center;
+    background-size: contain; }
+  .win #tea-img {
+    background: url("../images/tea.png") no-repeat center;
+    background-size: contain; }
+  .win #espresso-img {
+    background: url("../images/espresso.png") no-repeat center;
+    background-size: contain; }
+
+/* tossing animation */
+.tossing {
+  animation-name: tossing;
+  -webkit-animation-name: tossing;
+  animation-duration: 2.25s;
+  -webkit-animation-duration: 2.25s;
+  animation-iteration-count: infinite;
+  -webkit-animation-iteration-count: infinite; }
+
+@keyframes tossing {
+  0% {
+    transform: rotate(-4deg); }
+
+  50% {
+    transform: rotate(4deg); }
+
+  100% {
+    transform: rotate(-4deg); } }
+
+@-webkit-keyframes tossing {
+  0% {
+    -webkit-transform: rotate(-4deg); }
+
+  50% {
+    -webkit-transform: rotate(4deg); }
+
+  100% {
+    -webkit-transform: rotate(-4deg); } }
